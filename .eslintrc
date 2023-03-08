@@ -1,0 +1,80 @@
+{
+  "env": {
+      "browser": true,
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+  "extends": [
+      "plugin:react/recommended",
+      "airbnb"
+  ],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 12,
+      "sourceType": "module"
+  },
+  "plugins": [
+      "react"
+  ],
+  "rules": {
+      "arrow-parens": ["off"],
+      "comma-dangle": ["error", "only-multiline"],
+      "consistent-return": "off",
+      "quotes": 1,
+      "global-require": "off",
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "no-control-regex":"off",
+      "import/prefer-default-export":"off",
+      "max-len": [
+          "error",
+          {
+            "code": 100,
+            "ignoreUrls": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+          }
+      ],
+      "max-lines" : [
+          "error",
+          {
+            "max": 500,
+            "skipBlankLines": true,
+            "skipComments": true
+          }
+      ],
+      "react/jsx-props-no-spreading":"off",
+      "no-alert": "off",
+      "no-confusing-arrow": "off",
+      "no-console": "off",
+      "no-labels": "off",
+      "no-plusplus": "off",
+      "no-nested-ternary": "off",
+      "no-shadow": "off",
+      "no-param-reassign": "off",
+      "no-underscore-dangle": "off",
+      "prefer-promise-reject-errors": "warn",
+      "prefer-template": "warn",
+      "react/forbid-prop-types": "warn",
+      "react/jsx-closing-tag-location": "off",
+      "react/jsx-filename-extension": "off",
+      "react/jsx-no-target-blank": "warn",
+      "react/no-multi-comp": ["error", { "ignoreStateless": true }],
+      "react/no-unescaped-entities": "off",
+      "react/prefer-stateless-function": "warn",
+      "react/button-has-type":"off",
+      "import/default": "off",
+      "import/extensions": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-unresolved": "off",
+      "jsx-a11y/interactive-supports-focus":"off",
+      "jsx-a11y/click-events-have-key-events":"off",
+      "jsx-a11y/anchor-is-valid":"off",
+      "jsx-a11y/no-noninteractive-element-interactions":"off",
+      "react/no-array-index-key":"off",
+      "jsx-a11y/img-redundant-alt":"off"
+  }
+}

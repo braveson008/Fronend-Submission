@@ -1,0 +1,22 @@
+.CardContainer {
+    width: 150px;
+    height: 200px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.CardContainer:hover {
+    transform: scale(1.15);
+}
+
+
+.NftImg {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius:4px;
+}
