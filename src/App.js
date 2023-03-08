@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react';
+import React, {
+  useRef, useState, lazy, Suspense
+} from 'react';
 
 // Libraries
 import axios from 'axios';
@@ -7,11 +9,12 @@ import NftCard from './components/NftCard/NftCard';
 import Header from './components/Header/Header';
 import LabelAndInput from './components/LabelAndInput/LabelAndInput';
 import AnimatedModal from './components/AnimatedModal/AnimatedModal';
-import DetailedNftCard from './components/DetailedNftCard/DetailedNftCard';
 // Other
 import { notifyError, notifySuccess } from './helpers/toasts';
 // Styles
 import './App.css';
+// Lazy Components
+const DetailedNftCard = lazy(() => import('./components/DetailedNftCard/DetailedNftCard'));
 
 function App() {
   // Hooks
@@ -71,13 +74,15 @@ function App() {
       </div>
 
       <AnimatedModal isOpen={openModal}>
-        <div className="DetailedNftCardCont">
-          <DetailedNftCard
-            selectedNft={selectedNft}
-            setOpenModal={setOpenModal}
-            chain={chainRef?.current?.value.toLowerCase()}
-          />
-        </div>
+        <Suspense>
+          <div className="DetailedNftCardCont">
+            <DetailedNftCard
+              selectedNft={selectedNft}
+              setOpenModal={setOpenModal}
+              chain={chainRef?.current?.value.toLowerCase()}
+            />
+          </div>
+        </Suspense>
       </AnimatedModal>
 
     </div>
